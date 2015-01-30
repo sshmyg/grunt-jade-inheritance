@@ -3,7 +3,7 @@
 var JadeInheritance = require('jade-inheritance');
 
 module.exports = function(grunt) {
-	var config = grunt.config('jade.compile.files');
+	var config = grunt.config('jade.dev.files');
 
 	// if using single file setup
 	if (config && config.length) {
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 		});
 
 		// grab first array of files, like original plan was to do
-		config = jadeConfig.jade.compile.files[0];
+		config = jadeConfig.jade.dev.files[0];
 
 		if (!config) throw ('Require jade task and propper task architecture');
 	}
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 
 			config.src = dependantFiles;
 
-			grunt.config('jade.compile.files', [config]);
+			grunt.config('jade.dev.files', [config]);
 
 			changedFiles = [];
 		}, 200);
