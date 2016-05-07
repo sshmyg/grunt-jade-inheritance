@@ -20,7 +20,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "jade-inheritance": "^0.1.0",
-    "load-grunt-configs": "^0.4.1"
+    "jade-inheritance": "^0.1.0"
   }
 }
